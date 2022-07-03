@@ -15,7 +15,7 @@ describe("Creates an Employee", () => {
     })
 
     it ("Employee email gets printed", () => {
-        const email = "anfaalali@gmail.com";
+        const email = "anfalali@gmail.com";
         const Emp = new Employee("Anfaal", "123", email);
         expect(Emp.email).toBe(email);
     })

@@ -31,11 +31,7 @@ function promptManager() {
           name: "managerEmail",
           message: "Enter your email address",
         },
-        {
-          type: "input",
-          name: "managerOfficeNumber",
-          message: "What is your office number?",
-        },
+    
       ])
       .then((answers) => {
         //use the Manager constructor to create my new Manager object to be displayed.
@@ -43,7 +39,6 @@ function promptManager() {
           answers.managerName,
           answers.managerId,
           answers.managerEmail,
-          answers.managerOfficeNumber
         );
   
         members.push(manager);
