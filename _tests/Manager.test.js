@@ -2,19 +2,19 @@ const Manager = require ('../lib/Manager');
 
 
 describe("Creates Manager", () => {
-    it ("Employee name should get printed", () => {
+    it ("Manager name should get printed", () => {
         const name = "Anfaal";
         const Emp = new Manager(name);
         expect(Emp.name).toBe(name);
     })
 
-    it ("Employee id gets printed", () => {
+    it ("Manager id gets printed", () => {
         const id = "456";
         const Emp = new Manager("Anfaal", id);
         expect(Emp.id).toBe(id);
     })
 
-    it ("Employee email gets printed", () => {
+    it ("Manager email gets printed", () => {
         const email = "anfaalali@gmail.com";
         const Emp = new Manager("Anfaal", "456", email);
         expect(Emp.email).toBe(email);
