@@ -9,10 +9,10 @@ const Intern = require("./lib/Intern");
 const renderHtml = require("./scr/generateHTLM");
 
 //create an empty array 
-const members = [];
+const teamMembersArray= [];
 
 //creating a function for Manager to allow the app to initialize and create a manager.
-function promptManager() {
+function managerPrompts() {
     inquirer
       .prompt([
         {
@@ -41,14 +41,13 @@ function promptManager() {
           answers.managerEmail,
         );
   
-        members.push(manager);
-  // create a loop to go into main menu.
-        menu();
+        teamMembersArray.push(manager);
+        buildTeam();
       });
-  }
+  };
   
   //create function with main menu for the next team members
-  function menu() {
+  function buildTeam() {
     inquirer
       .prompt([
         {
@@ -59,22 +58,18 @@ function promptManager() {
         },
       ])
       .then((answers) => {
-        switch (answers.mainMenu) {
-          case "Engineer":
-            promptEngineer();
-            break;
-          case "Intern":
-            promptIntern();
-            break;
-          default:
-          buildTeam();
+        if (answers.roles === "Engineer") {
+          engineerPrompts();
+        } else if (answers.roles === "Intern") {
+          internPrompts();
+        } else {
+          writeFile();
         }
       });
-  }
+  };
   
-  promptManager();
   
-  function promptEngineer(){
+  function engineerPrompts(){
     inquirer.prompt([
       {
               //  QUESTIONS
@@ -104,13 +99,13 @@ function promptManager() {
         answers.engineerEmail,
         answers.engineerGithub
       )
-      members.push(engineer)
-      menu();
-    })
+      teamMembersArray.push(engineer)
+      buildTeam();
+    });
   
   }
   
-  function promptIntern(){
+  function internPrompts(){
     inquirer.prompt([
        //QUESTIONS
        {
@@ -141,16 +136,21 @@ function promptManager() {
          answers.internEmail,
          answers.internSchool
        )
-       members.push(intern)
-       menu();
+       teamMembersArray.push(intern)
+       buildTeam();
     })
   }
 
-  //created function buildTeam to allow the index.html to be overwritten with the new information input by the user. 
-function buildTeam(){
-    //write file sync takes the path to the file I want to overwrite.
-    //and the function with the parameter that contains all the data with the new objects to be rendered.
-      fs.writeFileSync("./dist/index.html", renderHtml(members),(err)=>{
-        if(err) throw err;
-      })
-  }
+  const writeFile = () => {
+    fs.writeFileSync("./dist/index.html", renderHTML(teamMembersArray), (err) => {
+      if (err) {
+        console.log(err);
+        return;
+      } else {
+        console.log("Your team profile has been successfully created!");
+      }
+    });
+  };
+  
+  managerPrompts();
+  
