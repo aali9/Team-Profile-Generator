@@ -3,12 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "directories": {
-    "lib": "lib"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "directories": "For this weeks assignment I generated a webpage using various Node packages that displays my team's basic info so that I have quick access to their emails and GitHub profiles.", 
+  "scripts" : { 
+    "test" : "jest" 
+ },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/aali9/Team-Profile-Generator.git"
@@ -23,5 +21,9 @@
   "dependencies": {
     "inquirer": "^8.2.4",
     "jest": "^28.1.2"
-  }
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "devDependencies": {}
 }

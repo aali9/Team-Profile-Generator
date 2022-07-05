@@ -23,6 +23,6 @@ describe("Creates Manager", () => {
 
 it ("Manager github username gets printed", () => {
     const github = "aali9";
-    const Emp = new Engineer("Anfaal", "456", "anfaalali@gmail.com", github);
+    const Emp = new Manager ("Anfaal", "456", "anfaalali@gmail.com", github);
     expect(Emp.getGithub()).toBe(github);
 })

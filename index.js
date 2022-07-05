@@ -67,7 +67,7 @@ function promptManager() {
             promptIntern();
             break;
           default:
-            buildTeam();
+          buildTeam();
         }
       });
   }
