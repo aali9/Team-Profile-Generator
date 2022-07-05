@@ -6,7 +6,7 @@ const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 
 //require the function from folder src that has the template.js in it.
-const renderHtml = require("./scr/generateHTLM");
+const generateHTML = require("./scr/generateHTLM");
 
 //create an empty array 
 const teamMembersArray= [];
@@ -142,7 +142,7 @@ function managerPrompts() {
   }
 
   const writeFile = () => {
-    fs.writeFileSync("./dist/index.html", renderHTML(teamMembersArray), (err) => {
+    fs.writeFileSync("./dist/index.html", generateHTML(teamMembersArray), (err) => {
       if (err) {
         console.log(err);
         return;
