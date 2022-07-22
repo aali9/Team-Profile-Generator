@@ -61,4 +61,13 @@ This application is rendered under MIT
 
  . Jest
 
- ## Questions
+ ## Demo and Links
+
+  # Deployed Link:
+ https://github.com/aali9/Team-Profile-Generator
+
+# Link for recording: 
+
+
+# Application image:
+![alt text](images/Picture1.png)
