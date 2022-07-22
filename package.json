@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "directories": "For this weeks assignment I generated a webpage using various Node packages that displays my team's basic info so that I have quick access to their emails and GitHub profiles.", 
-  "scripts" : { 
-    "test" : "jest" 
- },
+  "directonries": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest --verbose"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/aali9/Team-Profile-Generator.git"
@@ -19,11 +21,12 @@
   },
   "homepage": "https://github.com/aali9/Team-Profile-Generator#readme",
   "dependencies": {
+    "fs": "^0.0.1-security",
     "inquirer": "^8.2.4",
-    "jest": "^28.1.2"
+    "jest": "^28.1.2",
+    "path": "^0.12.7"
   },
   "directories": {
     "lib": "lib"
-  },
-  "devDependencies": {}
+  }
 }
