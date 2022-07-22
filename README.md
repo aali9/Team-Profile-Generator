@@ -1,4 +1,5 @@
-# Team-Profile- <img src="https://img.shields.io/badge/LICENSE-MIT-blue.svg"> 
+# Team-Profile-
+ <img src="https://img.shields.io/badge/LICENSE-MIT-blue.svg"> 
    <img src="https://img.shields.io/badge/npm package-8.2.0-green.svg"> 
 
    ## Description
@@ -36,16 +37,11 @@ Inquirer is easiest to use when installed with npm: npm install inquirer. Then y
 
 This application is rendered under MIT
 
-  ## Contribution 
-
-  No other contributors
-
    ## Tests
 
     test 
 
  ## Technology
-
 
  . HTML
 
@@ -63,7 +59,6 @@ This application is rendered under MIT
 
  ## Demo and Links
 
-  # Deployed Link:
  https://github.com/aali9/Team-Profile-Generator
 
 # Link for recording: 
